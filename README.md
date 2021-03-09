@@ -1,14 +1,10 @@
-# gatsby-starter-gcn
+# gatsby-starter-contentful
 
-A starter template to build amazing static websites with Gatsby, Contentful and Netlify. Inspired by [gatsby-contentful-starter](https://github.com/contentful-userland/gatsby-contentful-starter).
+A Simplest starter template to build amazing static websites with Gatsby and Contentful. Inspired by [gatsby-starter-gcn](https://github.com/ryanwiemer/gatsby-starter-gcn).
 
 ## Features
 
-- Contentful integration with ready to go placeholder content
-- Netlify integration including a pre-built contact form
-- Minimal responsive design - made to customize or tear apart
-- Pagination logic
-- Theme UI
+- Contentful integration with starter
 - SEO Friendly Component
   - OpenGraph sharing support
   - Sitemap Generation
@@ -18,25 +14,25 @@ A starter template to build amazing static websites with Gatsby, Contentful and 
 - [Gatsby Standard module](https://www.npmjs.com/package/eslint-config-gatsby-standard) for linting Javascript with StandardJS
 - Stylelint support for Styled Components to lint the CSS in JS
 
-## Demo
+<!-- ## Demo
 
 https://gcn.netlify.com/
 
-![](screenshots/demo.jpg)
+![](screenshots/demo.jpg) -->
 
 ## Getting Started
 
 ### Install
 
 ```
-git clone https://github.com/ryanwiemer/gatsby-starter-gcn.git
+git clone https://github.com/MonadsTech/gatsby-starter-gcn.git
 yarn install
 ```
 
 Or via the [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli)
 
 ```
-gatsby new gatsby-starter-gcn https://github.com/ryanwiemer/gatsby-starter-gcn.git
+gatsby new gatsby-starter-contentful https://github.com/MonadsTech/gatsby-starter-gcn.git
 ```
 
 ### Setup Contentful
@@ -51,7 +47,7 @@ gatsby new gatsby-starter-gcn https://github.com/ryanwiemer/gatsby-starter-gcn.g
 
 ### Website Data
 
-Edit siteMeta data in [`/src/gatsby-config.js`](https://github.com/ryanwiemer/gatsby-starter-gcn/blob/master/src/gatsby-config.js)
+Edit siteMeta data in [`/src/gatsby-config.js`](https://github.com/MonadsTech/gatsby-starter-gcn/blob/master/src/gatsby-config.js)
 
 ```js
   siteMetadata: {
@@ -74,14 +70,8 @@ Edit siteMeta data in [`/src/gatsby-config.js`](https://github.com/ryanwiemer/ga
         slug: '/contact/',
       },
     ],
-    postsPerFirstPage: 7, // Number of posts on the first page
-    postsPerPage: 6, // Number of posts used on all other pages
     /*
-      Root URL for posts and tags
-      For example: 'blog' will result in:
-        - www.example.com/blog/
-        - www.example.com/blog/post-name/
-        - www.example.com/blog/tag/tag-name/
+      Root URL for site 
     */
     basePath: '/', // Defaults to the homepage
   }
@@ -89,35 +79,7 @@ Edit siteMeta data in [`/src/gatsby-config.js`](https://github.com/ryanwiemer/ga
 
 **Note:** If you do not see your changes reflected when developing locally you may need to run `yarn clean` followed by restarting the server via `yarn develop`.
 
-### Theme UI
 
-Edit [`/src/gatsby-plugin-theme-ui/index.js`](https://github.com/ryanwiemer/gatsby-starter-gcn/blob/master/src/gatsby-plugin-them-ui/index.js)
-
-```js
-export default {
-  colors: {
-    background: '#ffffff',
-    text: '#121212',
-    primary: '#121212',
-    secondary: '#e9e9e9',
-    tertiary: '#f3f3f3',
-    highlight: '#5b8bf7',
-  },
-  fonts: {
-    body:
-      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-  },
-  sizes: {
-    maxWidth: '1050px',
-    maxWidthCentered: '650px',
-  },
-  responsive: {
-    small: '35em',
-    medium: '50em',
-    large: '70em',
-  },
-}
-```
 
 ### Using Gatsby Standard
 
@@ -169,14 +131,6 @@ GOOGLE_ANALYTICS
 
 ![](screenshots/contentful-webhook-selected-events.jpg)
 
-### Netlify Form Notifications (Optional)
-
-1.  Navigate to Netlify:
-    **Forms** → **Notifications**
-
-2.  Click the add notification dropdown and select your desired notification method.
-
-![](screenshots/netlify-form-notifcations.jpg)
 
 ## Useful Tips
 
