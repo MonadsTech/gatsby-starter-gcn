@@ -56,14 +56,14 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
           },
           `gatsby-remark-autolink-headers`,
-          // {
-          //   resolve: `gatsby-remark-images-contentful`,
-          //   options: {
-          //     maxWidth: 650,
-          //     backgroundColor: 'white',
-          //     linkImagesToOriginal: false,
-          //   },
-          // },
+          {
+            resolve: `gatsby-remark-images-contentful`,
+            options: {
+              maxWidth: 650,
+              backgroundColor: 'white',
+              linkImagesToOriginal: false,
+            },
+          },
         ],
       },
     },
@@ -95,14 +95,14 @@ module.exports = {
         icon: './static/images/favicon.png',
       },
     },
-    // 'gatsby-plugin-offline',
-    // {
-    //   resolve: `gatsby-plugin-schema-snapshot`,
-    //   options: {
-    //     path: `./src/gatsby/schema/schema.gql`,
-    //     update: process.env.GATSBY_UPDATE_SCHEMA_SNAPSHOT,
-    //   },
-    // },
-    // 'gatsby-plugin-netlify',
+    'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-schema-snapshot`,
+      options: {
+        path: `./src/gatsby/schema/schema.gql`,
+        update: process.env.GATSBY_UPDATE_SCHEMA_SNAPSHOT,
+      },
+    },
+    'gatsby-plugin-netlify',
   ],
 }
