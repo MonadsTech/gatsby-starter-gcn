@@ -1,3 +1,8 @@
+
+const activeEnv =
+process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+
+
 let contentfulConfig
 try {
   contentfulConfig = require('./.contentful')
@@ -15,6 +20,13 @@ try {
   }
 }
 
+require("dotenv").config({
+  path: `.env`,
+})
+// require("dotenv").config({
+//   path: `.env.${activeEnv}`,
+// })
+
 module.exports = {
   siteMetadata: {
     title: 'GCN',
@@ -31,18 +43,10 @@ module.exports = {
         name: 'About',
         slug: '/about/',
       },
-      {
-        name: 'Contact',
-        slug: '/contact/',
-      },
     ],
-    postsPerFirstPage: 7,
-    postsPerPage: 6,
     basePath: '/',
   },
   plugins: [
-    `gatsby-plugin-emotion`,
-    'gatsby-plugin-theme-ui',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-transformer-remark`,
@@ -52,14 +56,14 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
           },
           `gatsby-remark-autolink-headers`,
-          {
-            resolve: `gatsby-remark-images-contentful`,
-            options: {
-              maxWidth: 650,
-              backgroundColor: 'white',
-              linkImagesToOriginal: false,
-            },
-          },
+          // {
+          //   resolve: `gatsby-remark-images-contentful`,
+          //   options: {
+          //     maxWidth: 650,
+          //     backgroundColor: 'white',
+          //     linkImagesToOriginal: false,
+          //   },
+          // },
         ],
       },
     },
@@ -91,14 +95,14 @@ module.exports = {
         icon: './static/images/favicon.png',
       },
     },
-    'gatsby-plugin-offline',
-    {
-      resolve: `gatsby-plugin-schema-snapshot`,
-      options: {
-        path: `./src/gatsby/schema/schema.gql`,
-        update: process.env.GATSBY_UPDATE_SCHEMA_SNAPSHOT,
-      },
-    },
-    'gatsby-plugin-netlify',
+    // 'gatsby-plugin-offline',
+    // {
+    //   resolve: `gatsby-plugin-schema-snapshot`,
+    //   options: {
+    //     path: `./src/gatsby/schema/schema.gql`,
+    //     update: process.env.GATSBY_UPDATE_SCHEMA_SNAPSHOT,
+    //   },
+    // },
+    // 'gatsby-plugin-netlify',
   ],
 }
