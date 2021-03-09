@@ -1,7 +1,7 @@
 {
   "name": "@monadstech/gatsby-starter-contentful",
   "description": "A starter template to build amazing static websites with Gatsby, Contentful and Netlify",
-  "version": "2.1.",
+  "version": "2.1.3",
   "repository": "https://github.com/monadstech/gatsby-starter-gcn",
   "author": "Pankaj Vaghela <vpankaj1998official@gmail.com>",
   "dependencies": {
